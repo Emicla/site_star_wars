@@ -1,9 +1,10 @@
-import { TextField } from '@mui/material';
+import { Input, TextField } from '@mui/material';
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import '../assets/css/Login.css' 
 
 export default function Login(){
-
+    const navigate = useNavigate()
     const [email, setEmail] = useState()
     const [password, setPassword] = useState()
 
@@ -31,10 +32,15 @@ export default function Login(){
                     type="password"
                     value={password}
                     onChange={(e) => { setPassword(e.target.value) }}
-                    />
+                />
+                
+                <input type="checkbox"/>
+                <label>Lembrar-me</label>
             </div>
             <div className='div-buttons'>
-                <button className='btnLogin'>LOGIN</button>
+                <button className='btnLogin' onClick={() => {
+                    navigate('/menu')
+                }}> LOGIN </button>
                 <button className='btnClear'>CLEAR</button>
             </div>
         </div>
