@@ -2,6 +2,7 @@ import { useLayoutEffect, useState } from 'react';
 import Cabecalho from '../components/Cabecalho'
 import Rodape from '../components/Rodape'
 import { buscarApi } from '../services/BuscarDadosApi';
+import '../assets/css/Films.css'
 
 export default function Films() {
     const [dados, setDados] = useState([]);
@@ -21,19 +22,19 @@ export default function Films() {
         <div>
             <Cabecalho />
             <main>
-                <ul>
+                <h2>Filmes</h2>
+                <div className='div-films'>
                     {
                         dados.map((item, key) => {
                             return (
-                                <>
-                                    <li key={key}>Titulo: {item.title}</li>
-                                    <li>Diretor: {item.producer}</li>
-                                    <br/>
-                                </>
+                                <div key={key} className='div-info'>
+                                    <p>Titulo: {item.title}</p>
+                                    <p>Diretor: {item.producer}</p>
+                                </div>
                             )
                         })
                     }
-                </ul>
+                </div>
             </main>
             <Rodape />
         </div>

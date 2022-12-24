@@ -2,9 +2,9 @@ import { useLayoutEffect, useState } from 'react';
 import Cabecalho from '../components/Cabecalho'
 import Rodape from '../components/Rodape'
 import { buscarApi } from '../services/BuscarDadosApi';
+import '../assets/css/Planets.css'
 
-
-export default function Planets(){
+export default function Planets() {
 
     const [dados, setDados] = useState([]);
 
@@ -23,21 +23,22 @@ export default function Planets(){
         <div>
             <Cabecalho />
             <main>
-                {
-                    dados.map((item, key) => {
-                        return (
-                            <>
-                                <div key={key}>
+                <h2>Planets</h2>
+                <div className='div-planets'>
+                    {
+                        dados.map((item, key) => {
+                            return (
+                                <div key={key} className='planets'>
                                     <p>Nome: {item.name}</p>
                                     <p>Clima: {item.climate}</p>
                                     <p>Diâmetro: {item.diameter}</p>
                                     <p>Terreno: {item.terrain}</p>
-                                    <br/>
+                                    <br />
                                 </div>
-                            </>
-                        )
-                    })
-                }
+                            )
+                        })
+                    }
+                </div>
             </main>
             <Rodape />
         </div>

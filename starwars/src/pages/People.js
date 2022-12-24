@@ -2,9 +2,9 @@ import { useLayoutEffect, useState } from 'react';
 import Cabecalho from '../components/Cabecalho'
 import Rodape from '../components/Rodape'
 import { buscarApi } from '../services/BuscarDadosApi';
+import '../assets/css/People.css'
 
-
-export default function People(){
+export default function People() {
 
     const [dados, setDados] = useState([]);
 
@@ -23,20 +23,21 @@ export default function People(){
         <div>
             <Cabecalho />
             <main>
-                {
-                    dados.map((item, key) => {
-                        return (
-                            <>
-                                <div key={key}>
+                <h2>People</h2>
+                <div className='div-informacoes'>
+                    {
+                        dados.map((item, key) => {
+                            return (
+                                <div key={key} className='informacoes'>
                                     <p>Nome: {item.name}</p>
                                     <p>Dia do nascimento: {item.birth_year}</p>
                                     <p>Genero: {item.gender}</p>
-                                    <br/>
+                                    <br />
                                 </div>
-                            </>
-                        )
-                    })
-                }
+                            )
+                        })
+                    }
+                </div>
             </main>
             <Rodape />
         </div>

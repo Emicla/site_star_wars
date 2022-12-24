@@ -8,14 +8,14 @@ export default function About() {
     return (
         <div>
             <Cabecalho />
-            <main>
+            <main className='main-about'>
                 <div className='div-dados'>
                     <img src={Emicla} />
                     <div className='dados'>
                         <p>EMICLÃ LENON DA ROSA</p>
                         <p>1129842</p>
                         <p>emiclalenondarosa@gmail.com</p>
-                        <p>https://www.linkedin.com/in/emicl%C3%A3-lenon-da-rosa/</p>
+                        <p><a href='https://www.linkedin.com/in/emicl%C3%A3-lenon-da-rosa/'> Emiclã Lenon da Rosa</a></p>
                     </div>
 
                 </div>
@@ -25,7 +25,7 @@ export default function About() {
                         <p>LUIS HENRIQUE MISTURA DA SILVA</p>
                         <p>1125146</p>
                         <p>mistura.luishenrique@gmail.com</p>
-                        <p>https://www.linkedin.com/in/luis-henrique-mistura-da-silva-35a9051b2/</p>
+                        <p><a href='https://www.linkedin.com/in/luis-henrique-mistura-da-silva-35a9051b2/'>Luis Henrique Mistura</a></p>
                     </div>
                 </div>
             </main >

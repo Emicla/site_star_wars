@@ -44,6 +44,26 @@ main {
     padding: 20px;
 }
 
+main h2 {
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    font-size: 3rem;
+}
+
+.div-informacoes {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.informacoes {
+    text-align: center;
+    display: inline-block;
+    padding: 20px;
+    border-radius: 10px;
+    margin-right: 10px;
+}
+
 footer {
     color: white;
     display: flex;
@@ -57,4 +77,3 @@ footer li {
     padding-bottom: 10px;
     text-align: center;
 }
-
