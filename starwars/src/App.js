@@ -8,6 +8,11 @@ import Login from "./pages/Login";
 import Menu from "./pages/Menu";
 import Duvidas from './pages/Duvidas';
 import Films from './pages/Films';
+import Startshisps from './pages/Startships';
+import Planets from './pages/Planets';
+import People from './pages/People';
+import Species from './pages/Species';
+import About from './pages/About';
 
 function App() {
 
@@ -37,7 +42,7 @@ function App() {
     },
     {
       path: "/startships",
-      element: login ? <Startships /> : <Login verificarLogin={verificarLogin} />,
+      element: login ? <Startshisps /> : <Login verificarLogin={verificarLogin} />,
     },
     {
       path: "/people",
