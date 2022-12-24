@@ -10,12 +10,12 @@ export default function Cabecalho(){
                 <ul className="lista-menu">
                     <li onClick={() => navigate("/")}>HOME</li>
                     <li onClick={() => navigate("/films")}>FILMS</li>
-                    <li>STARTSHIPS</li>
-                    <li>PEOPLE</li>
-                    <li>PLANETS</li>
-                    <li>SPECIES</li>
+                    <li onClick={() => navigate("/startships")}>STARTSHIPS</li>
+                    <li onClick={() => navigate("/people")}>PEOPLE</li>
+                    <li onClick={() => navigate("/planets")}>PLANETS</li>
+                    <li onClick={() => navigate("/species")}>SPECIES</li>
                     <li onClick={() => navigate("/duvidas")}>DÚVIDAS</li>
-                    <li>ABOUT</li>
+                    <li onClick={() => navigate("/about")}>ABOUT</li>
                     <li>LOGOFF</li>
                 </ul>    
             </nav>        

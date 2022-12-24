@@ -6,7 +6,7 @@ import axios from 'axios';
 export default function Films(){
     
     const buscarApi = () => {
-        axios.get("https://swapi.dev/films")
+        axios.get("https://swapi.dev/api/films/")
             .then((dados) => console.log(dados))
             .catch((erro) => console.log("Algo deu errado: " + erro));
     }
