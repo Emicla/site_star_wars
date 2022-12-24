@@ -37,7 +37,6 @@ export default function Duvidas() {
     return (
         <div>
             <Cabecalho />
-            
             <main>
                 <TextField
                     style={{ marginBottom: 25 }}
@@ -60,10 +59,10 @@ export default function Duvidas() {
                     onChange={(e) => { setWhats(e.target.value) }}
                 />
                 <textarea value={duvida} onChange={(e) => { setDuvida(e.target.value) }}></textarea>
+                <br/>
                 <button onClick={cadastrarDuvida}>Enviar</button>
                 <button onClick={limpar}>Limpar</button>
             </main>
-
             <Rodape/>
         </div>
     )

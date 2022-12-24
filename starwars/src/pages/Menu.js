@@ -57,10 +57,10 @@ export default function Menu() {
                     {
                         // duvidas.map((duvida, key) => {
                         //     return (
-                        //         <tr id={key}>
-                        //             <td>{duvida.nome}</td>
-                        //             <td>{duvida.whats}</td>
-                        //             <td>{duvida.duvida}</td>
+                        //         <tr>
+                        //             <td key={key}>{duvida.nome}</td>
+                        //             <td key={key}>{duvida.whats}</td>
+                        //             <td key={key}>{duvida.duvida}</td>
                         //         </tr>
                         //     )
                         // })

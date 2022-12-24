@@ -5,7 +5,7 @@ export default function Cabecalho(){
 
     return(
         <header>
-            <h1> CHUBAKU MENU APP </h1>
+            <h1> CHEWBACCA MENU APP </h1>
             <nav>
                 <ul className="lista-menu">
                     <li onClick={() => navigate("/")}>HOME</li>

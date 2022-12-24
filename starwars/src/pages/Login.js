@@ -48,7 +48,7 @@ export default function Login(props){
 
     return (
         <div className='div-login'>
-            <h1>CHUBAKA LOGIN</h1>
+            <h1>CHEWBACCA LOGIN</h1>
             <div className='div-form-login'>
             <TextField
                     style={{ marginBottom: 25 }}
