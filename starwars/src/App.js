@@ -7,6 +7,7 @@ import {
 import Login from "./pages/Login";
 import Menu from "./pages/Menu";
 import Duvidas from './pages/Duvidas';
+import Films from './pages/Films';
 
 function App() {
 
@@ -29,6 +30,10 @@ function App() {
     {
       path: "/duvidas",
       element: login ? <Duvidas /> : <Login verificarLogin={verificarLogin} />,
+    },
+    {
+      path: "/films",
+      element: login ? <Films /> : <Login verificarLogin={verificarLogin} />,
     },
   ]);
 

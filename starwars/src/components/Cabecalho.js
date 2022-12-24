@@ -9,7 +9,7 @@ export default function Cabecalho(){
             <nav>
                 <ul className="lista-menu">
                     <li onClick={() => navigate("/")}>HOME</li>
-                    <li>FILMS</li>
+                    <li onClick={() => navigate("/films")}>FILMS</li>
                     <li>STARTSHIPS</li>
                     <li>PEOPLE</li>
                     <li>PLANETS</li>
