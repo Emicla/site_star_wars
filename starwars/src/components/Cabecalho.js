@@ -3,6 +3,11 @@ import { useNavigate } from 'react-router-dom';
 export default function Cabecalho(){
     const navigate = useNavigate();
 
+    const logoff = () => {
+        sessionStorage.removeItem("login");
+        navigate("/");
+    }
+
     return(
         <header>
             <h1> CHEWBACCA MENU APP </h1>
@@ -16,7 +21,7 @@ export default function Cabecalho(){
                     <li onClick={() => navigate("/species")}>SPECIES</li>
                     <li onClick={() => navigate("/duvidas")}>DÚVIDAS</li>
                     <li onClick={() => navigate("/about")}>ABOUT</li>
-                    <li>LOGOFF</li>
+                    <li onClick={() => logoff()}>LOGOFF</li>
                 </ul>    
             </nav>        
         </header>
