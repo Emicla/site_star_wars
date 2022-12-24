@@ -1,0 +1,40 @@
+body {
+    background-color: black;
+}
+.div-login{
+    background-color: white;
+    width: 50%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+    border-radius: 7px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.div-login h1 {
+    text-align: center;
+}
+
+.div-buttons {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.div-buttons button {
+    padding: 10px 15px;
+    background-color: black;
+    cursor: pointer;
+}
+
+.div-buttons .btnLogin {
+    color: aqua;
+    border-radius: 5px;
+    border: 1px solid aqua;
+}
+
+.div-buttons .btnClear {
+    color: yellow;
+    border-radius: 5px;
+    border: 1px solid yellow;
+}
