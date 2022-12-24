@@ -7,7 +7,7 @@
     background-color: #333333;
     color: white;
     border-radius: 15px;
-    padding: 10px 15px;
+    padding: 15px;
     text-align: center;
     margin-right: 20px;
 }
@@ -17,8 +17,25 @@
     border-radius: 10px;
     display: block;
     margin: auto;
+    margin-bottom: 15px;
 }
 
 .div-dados .dados{
+    text-align: justify;
+}
+
+.dados p, .dados a {
+    margin-bottom: 10px;
     color: white;
+    text-decoration: none;
+}
+
+.dados a {
+    cursor: pointer;
+    color: #ff5959;
+    font-weight: bold;
+}
+
+.dados a:hover {
+    color: #ff5959;
 }

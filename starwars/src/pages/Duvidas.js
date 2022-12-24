@@ -5,6 +5,8 @@ import Cabecalho from '../components/Cabecalho';
 import Rodape from '../components/Rodape';
 import { salvarDuvida } from '../services/BancoServices';
 
+import "../assets/css/Duvidas.css";
+
 export default function Duvidas() {
     const navigate = useNavigate();
 
@@ -21,7 +23,7 @@ export default function Duvidas() {
 
         try {
             await salvarDuvida(dados);
-            navigate("/");
+            navigate("/menu");
 
         } catch (erro) {
             alert(erro);
@@ -38,32 +40,39 @@ export default function Duvidas() {
         <div>
             <Cabecalho />
             <main>
-                <TextField
-                    style={{ marginBottom: 25 }}
-                    className="input-standart"
-                    label="Nome"
-                    fullWidth={true}
-                    variant="standard"
-                    type="text"
-                    value={nome}
-                    onChange={(e) => { setNome(e.target.value) }}
-                />
-                <TextField
-                    style={{ marginBottom: 25 }}
-                    className="input-standart"
-                    label="Whats"
-                    fullWidth={true}
-                    variant="standard"
-                    type="text"
-                    value={whats}
-                    onChange={(e) => { setWhats(e.target.value) }}
-                />
-                <textarea value={duvida} onChange={(e) => { setDuvida(e.target.value) }}></textarea>
-                <br/>
-                <button onClick={cadastrarDuvida}>Enviar</button>
-                <button onClick={limpar}>Limpar</button>
+                <div className='div-form'>
+                    <div className='inputs'>
+                        <TextField
+                            style={{ marginBottom: 25 }}
+                            className="input-standart"
+                            label="Nome"
+                            fullWidth={true}
+                            variant="standard"
+                            type="text"
+                            value={nome}
+                            onChange={(e) => { setNome(e.target.value) }}
+                        />
+                        <TextField
+                            style={{ marginBottom: 25 }}
+                            className="input-standart"
+                            label="Whats"
+                            fullWidth={true}
+                            variant="standard"
+                            type="text"
+                            value={whats}
+                            onChange={(e) => { setWhats(e.target.value) }}
+                        />
+                    </div>
+
+                    <textarea value={duvida} cols="70" rows="15" onChange={(e) => { setDuvida(e.target.value) }}></textarea>
+
+                    <div className='botoes'>
+                        <button onClick={cadastrarDuvida}>Enviar</button>
+                        <button onClick={limpar}>Limpar</button>
+                    </div>
+                </div>
             </main>
-            <Rodape/>
+            <Rodape />
         </div>
     )
 }

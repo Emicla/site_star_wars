@@ -1,6 +1,6 @@
 import { getDocs, getFirestore, query } from "firebase/firestore";
 import { app } from "../services/FirebaseConnect";
-import { collection, addDoc } from "firebase/firestore";
+import { collection, addDoc, doc, deleteDoc  } from "firebase/firestore";
 
 const db = getFirestore(app);
 
@@ -35,6 +35,17 @@ export function buscarDuvidas() {
             
         } catch (error) {
             reject(error)
+        }
+    })
+}
+
+export function deleteDuvida(id) {
+    return new Promise(async (resolve, reject) => {
+        try {
+            await deleteDoc(doc(db, "duvidas", id));
+            resolve()
+        } catch (error) {
+            reject(error);
         }
     })
 }

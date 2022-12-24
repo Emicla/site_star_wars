@@ -1,22 +1,14 @@
-.div-startships {
-    display: flex;
-    justify-content: space-evenly;
+.starships {
+    background-color: rgb(24, 119, 24);
+    color: white;
+    border: 2px solid #FFFFFF;
 }
 
-.startships {
-    border: 1px solid black;
-    background-color: green;
-    color: white;
-    text-align: center;
-    display: inline-block;
-    padding: 20px;
-    border-radius: 10px;
-    margin-right: 10px;
-}
-
-main h2 {
-    text-align: center;
-    color: white;
+.starships:hover {
+    background-color: rgb(30, 182, 30);
     font-weight: bold;
-    font-size: 3rem;
+}
+
+.starships p {
+    margin-bottom: 15px;
 }

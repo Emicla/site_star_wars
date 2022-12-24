@@ -1,0 +1,47 @@
+.numEntradas {
+    background-color: #CC0000;
+    display: inline-block;
+    padding: 20px 25px;
+    color: #FFFFFF;
+    border-radius: 50%;
+    border: 3px solid #FFFFFF;
+    position: fixed;
+    top: 40px;
+    right: 40px;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.tabela-duvidas {
+    background-color: #5e0000;
+    border-radius: 20px 20px 0 0;
+    margin: auto;
+    margin-bottom: 50px;
+    font-size: 1.5rem;
+    padding: 3px;
+    max-width: 80%;
+}
+
+.tabela-duvidas th, .tabela-duvidas td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #000000;
+    background-color: #535353;
+    color: #ffffff;
+}
+
+.tabela-duvidas th:first-of-type {
+    border-radius: 20px 0 0 0;
+}
+
+.tabela-duvidas th:nth-of-type(4) {
+    border-radius: 0 20px 0 0;
+}
+
+.tabela-duvidas th {
+    background-color: rgb(37, 37, 37);
+}
+
+.tabela-duvidas .btnDeletar {
+    cursor: pointer;
+}

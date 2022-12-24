@@ -1,16 +1,11 @@
-.div-informacoes {
-    display: flex;
-    justify-content: space-evenly;
-    padding: 10px;
+.pessoa {
+    background-color: #090022;
+    color: #FFFFFF;
+    margin: 10px;
+    border: 2px solid #FFFFFF;
+    cursor: pointer;
 }
 
-.informacoes {
-    border: 1px solid black;
-    background-color: yellowgreen;
-    color: black;
-    text-align: center;
-    display: inline-block;
-    padding: 30px;
-    border-radius: 10px;
-    margin-right: 10px;
+.pessoa:hover {
+    background-color: #10003d;
 }

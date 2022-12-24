@@ -13,7 +13,7 @@ export default function Cabecalho(){
             <h1> CHEWBACCA MENU APP </h1>
             <nav>
                 <ul className="lista-menu">
-                    <li onClick={() => navigate("/")}>HOME</li>
+                    <li onClick={() => navigate("/menu")}>HOME</li>
                     <li onClick={() => navigate("/films")}>FILMS</li>
                     <li onClick={() => navigate("/startships")}>STARTSHIPS</li>
                     <li onClick={() => navigate("/people")}>PEOPLE</li>
