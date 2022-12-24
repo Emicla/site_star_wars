@@ -1,12 +1,50 @@
-import { Input, TextField } from '@mui/material';
-import { useState } from 'react';
+import { TextField } from '@mui/material';
+import { useLayoutEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import '../assets/css/Login.css' 
+
+import '../assets/css/Login.css'
+
+import login from '../services/AutenticadorServices';
 
 export default function Login(){
-    const navigate = useNavigate()
-    const [email, setEmail] = useState()
-    const [password, setPassword] = useState()
+    const navigate = useNavigate();
+    const [lembrarme, setLembrarme] = useState(false);
+    const [email, setEmail] = useState();
+    const [password, setPassword] = useState();
+
+    useLayoutEffect(() => {
+        setEmail(localStorage.getItem("email"));
+        setPassword(localStorage.getItem("senha"));
+    }, [])
+
+    const validar = async () => {
+
+        try {
+            await login(email, password);
+            sessionStorage.setItem("login", true);
+            props.verificarLogin();
+            navigate("/menu");
+
+        } catch (erro) {
+            alert(erro);
+        }
+    }
+
+    const limpar = () => {
+        setEmail("");
+        setPassword("");
+    }
+
+    const armazenarEmailSenha = () => {
+        setLembrarme(!lembrarme);
+        if (!lembrarme) {
+            localStorage.setItem("email", email);
+            localStorage.setItem("senha", password);
+        } else {
+            localStorage.removeItem("email", email);
+            localStorage.removeItem("senha", password);
+        }
+    }
 
     return (
         <div className='div-login'>
@@ -34,14 +72,12 @@ export default function Login(){
                     onChange={(e) => { setPassword(e.target.value) }}
                 />
                 
-                <input type="checkbox"/>
+                <input type="checkbox" checked={lembrarme} onChange={armazenarEmailSenha}/>
                 <label>Lembrar-me</label>
             </div>
             <div className='div-buttons'>
-                <button className='btnLogin' onClick={() => {
-                    navigate('/menu')
-                }}> LOGIN </button>
-                <button className='btnClear'>CLEAR</button>
+                <button className='btnLogin' onClick={validar}> LOGIN </button>
+                <button className='btnClear' onClick={limpar}>CLEAR</button>
             </div>
         </div>
     );
