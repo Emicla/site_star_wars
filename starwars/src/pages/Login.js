@@ -1,12 +1,11 @@
 import { TextField } from '@mui/material';
 import { useLayoutEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-
 import '../assets/css/Login.css'
 
 import login from '../services/AutenticadorServices';
 
-export default function Login(){
+export default function Login(props){
     const navigate = useNavigate();
     const [lembrarme, setLembrarme] = useState(false);
     const [email, setEmail] = useState();

@@ -1,7 +1,16 @@
+import Cabecalho from "../components/Cabecalho";
+import Rodape from "../components/Rodape";
+import '../assets/css/Menu.css';
+
 export default function Menu(){
+    
     return (
-        <div>
-            {"Entrou no Menu"};
+        <div className="div-menu">
+            <Cabecalho />        
+            <main>
+
+            </main>
+            <Rodape />
         </div>
     );
 };
