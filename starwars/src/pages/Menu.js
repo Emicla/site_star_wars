@@ -1,5 +1,4 @@
 import { useLayoutEffect, useState } from 'react';
-
 import Cabecalho from "../components/Cabecalho";
 import Rodape from "../components/Rodape";
 
@@ -10,11 +9,11 @@ export default function Menu() {
     const [contadorHome, setContadorHome] = useState();
     const [duvidas, setDuvidas] = useState();
 
-    const buscarApi = () => {
+    /*const buscarApi = () => {
         axios.get("https://swapi.dev/")
             .then((dados) => console.log(dados))
             .catch((erro) => console.log("Algo deu errado: " + erro));
-    }
+    }*/
 
     const contadorEntradas = () => {
         let contArmazenado = localStorage.getItem("contadorHome");
@@ -29,7 +28,7 @@ export default function Menu() {
     }
 
     useLayoutEffect(() => {
-        try {
+        /*try {
             buscarDuvidas()
                 .then((dados) => {
                     setDuvidas(dados);
@@ -41,9 +40,8 @@ export default function Menu() {
 
         } catch (error) {
             console.log(error);
-        }
-
-    }, []);
+        }*/
+    });
 
     return (
         <div className="div-menu">
@@ -57,15 +55,15 @@ export default function Menu() {
                         <th>Duvida</th>
                     </tr>
                     {
-                        duvidas.map((duvida, key) => {
-                            return (
-                                <tr>
-                                    <td>{duvida.nome}</td>
-                                    <td>{duvida.whats}</td>
-                                    <td>{duvida.duvida}</td>
-                                </tr>
-                            )
-                        })
+                        // duvidas.map((duvida, key) => {
+                        //     return (
+                        //         <tr id={key}>
+                        //             <td>{duvida.nome}</td>
+                        //             <td>{duvida.whats}</td>
+                        //             <td>{duvida.duvida}</td>
+                        //         </tr>
+                        //     )
+                        // })
                     }
                 </table>
 
