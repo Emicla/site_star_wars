@@ -6,6 +6,7 @@ import {
 } from "react-router-dom";
 import Login from "./pages/Login";
 import Menu from "./pages/Menu";
+import Duvidas from './pages/Duvidas';
 
 function App() {
 
@@ -24,6 +25,10 @@ function App() {
     {
       path: "/menu",
       element: login ? <Menu /> : <Login verificarLogin={verificarLogin} />,
+    },
+    {
+      path: "/duvidas",
+      element: login ? <Duvidas /> : <Login verificarLogin={verificarLogin} />,
     },
   ]);
 
