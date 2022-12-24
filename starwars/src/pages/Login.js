@@ -1,3 +1,5 @@
+import '../assets/css/Login.css' 
+
 export default function Login(){
     return (
         <div>
