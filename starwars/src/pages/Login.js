@@ -9,8 +9,8 @@ export default function Login(props){
     const navigate = useNavigate();
     
     const [lembrarme, setLembrarme] = useState(false);
-    const [email, setEmail] = useState();
-    const [password, setPassword] = useState();
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
 
     useLayoutEffect(() => {
         setEmail(localStorage.getItem("email"));

@@ -1,6 +1,6 @@
 import { getDocs, getFirestore, query } from "firebase/firestore";
 import { app } from "../services/FirebaseConnect";
-import { collection, addDoc, doc, deleteDoc } from "firebase/firestore";
+import { collection, addDoc } from "firebase/firestore";
 
 const db = getFirestore(app);
 
