@@ -1,0 +1,20 @@
+.div-dados {
+    display: inline-block;
+    background-color: #333333;
+    color: white;
+    border-radius: 15px;
+    padding: 10px;
+    text-align: center;
+    margin-right: 20px;
+}
+
+.div-dados img {
+    width: 350px;
+    border-radius: 10px;
+    display: block;
+    margin: auto;
+}
+
+.div-dados .dados{
+    
+}

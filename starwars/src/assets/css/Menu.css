@@ -41,7 +41,7 @@ header ul {
 
 main {
     background-color: rgb(107, 107, 107);
-    height: 335px;
+    padding: 20px;
 }
 
 footer {
@@ -57,3 +57,4 @@ footer li {
     padding-bottom: 10px;
     text-align: center;
 }
+
